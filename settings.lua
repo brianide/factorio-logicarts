@@ -24,4 +24,22 @@ data:extend({
     minimum_value = 1,
     maximum_value = 200,
   },
+  {
+    type = "int-setting",
+    name = "logicarts-cart-consumption-burner",
+    order = "a",
+    setting_type = "runtime-global",
+    default_value = 180,
+    minimum_value = 0,
+    maximum_value = 300,
+  },
+  {
+    type = "int-setting",
+    name = "logicarts-cart-consumption-electric",
+    order = "a",
+    setting_type = "runtime-global",
+    default_value = 18,
+    minimum_value = 0,
+    maximum_value = 300,
+  },
 })

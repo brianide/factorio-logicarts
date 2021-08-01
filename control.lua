@@ -43,9 +43,8 @@ local CAR_TICK_BELT = CAR_TICK_STARTING/2
 
 -- Since cars are using zero friction and constant speed, without touching entity.riding_state,
 -- the fuel consumption needs to be deducted manually once per tile https://wiki.factorio.com/Types/Energy
-local CAR_CONSUMPTION = 18*1000
-local CAR_CONSUMPTION_ELECTRIC = CAR_CONSUMPTION
-local CAR_CONSUMPTION_BURNER = CAR_CONSUMPTION * 10
+local CAR_CONSUMPTION_ELECTRIC = (settings.global["logicarts-cart-consumption-electric"].value or 18) * 1000 / (CAR_SPEED / 5)
+local CAR_CONSUMPTION_BURNER = (settings.global["logicarts-cart-consumption-burner"].value or 180) * 1000 / (CAR_SPEED / 5)
 
 -- Tick delay between signal updates when a car is at a logicarts-stop.
 local CAR_TICK_STOPPED = 60
